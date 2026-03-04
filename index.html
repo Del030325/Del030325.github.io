@@ -3,243 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Profesional - Nama Anda</title>
-    <!-- Mengambil Font Google yang modern -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio | Data & Web Student</title>
     
-    <style>
-        /* --- RESET & BASIC STYLE --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a { text-decoration: none; color: inherit; }
-
-        /* --- HERO SECTION (HOME PAGE) --- */
-        .hero {
-            height: 100vh; /* Layar penuh */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
-            color: white;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            animation: fadeInDown 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease;
-        }
-
-        .btn-view {
-            padding: 15px 40px;
-            background-color: white;
-            color: #2c3e50;
-            font-weight: 600;
-            border-radius: 50px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            cursor: pointer;
-            border: none;
-            animation: fadeInUp 1.2s ease;
-        }
-
-        .btn-view:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            background-color: #f0f0f0;
-        }
-
-        /* --- CV CONTENT SECTION --- */
-        .cv-container {
-            max-width: 900px;
-            margin: -80px auto 50px; /* Negatif margin agar naik sedikit ke atas hero */
-            background: white;
-            padding: 60px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 10;
-            display: none; /* Disembunyikan dulu */
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
-
-        .cv-header {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cv-header h2 {
-            font-size: 2rem;
-            color: #2c3e50;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            color: #4ca1af;
-            margin-bottom: 15px;
-            margin-top: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .job-item, .edu-item {
-            margin-bottom: 20px;
-        }
-
-        .job-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .company {
-            color: #666;
-            font-style: italic;
-            font-size: 0.9rem;
-        }
-
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: #f0f4f8;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            color: #2c3e50;
-        }
-
-        /* --- ANIMATIONS --- */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .cv-container { margin: 0; border-radius: 0; padding: 30px; }
-            .cv-header { flex-direction: column; text-align: center; }
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. HOME PAGE / HERO SECTION -->
-    <section class="hero" id="home">
-        <h1 id="name-display">Fadel Achmadinejab</h1>
-        <p>Web Developer & UI/UX Designer</p>
-        <button class="btn-view" onclick="showCV()">Lihat CV Lengkap</button>
+    <!-- 1. HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <div class="profile-wrapper">
+                <!-- Ganti src dengan foto profil Anda -->
+                <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+            </div>
+            <h1>Halo, Saya <span class="highlight">Fadel Ahcmadinejab</span></h1>
+            <p class="subtitle">Mahasiswa Ilmu Komputer</p>
+            <p class="desc">Pelajar di bidang Web Development</p>
+            
+            <div class="contact-btn">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fadelachmadinejab1@gmail.com" target="_blank" class="btn-email">
+                    <i class="fas fa-envelope"></i> fadelachmadinejab1@gmail.com
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. SKILLS SECTION -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Keahlian Saya</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Data Analysis, Pandas</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Database Management</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>C++</h3>
+                    <p>Algoritma & Logika</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML & CSS</h3>
+                    <p>Web Design</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- 2. ISI CV LENGKAP (Awalnya Tersembunyi) -->
-    <div class="cv-container" id="cv-content">
-        
-        <div class="cv-header">
-            <div>
-                <h2>Curriculum Vitae</h2>
-                <p>Kendari, Indonesia | fadelahcmadinejab1@gmail.com| 0852-1259-6389</p>
+    <!-- 3. EDUCATION TIMELINE -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2024 - Sekarang</span>
+                        <h3>Mahasiswa Ilmu Komputer</h3>
+                        <h4>Universitas Halu Oleo</h4>
+                        <p>Fokus studi: Pemrograman web</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2021 - 2024</span>
+                        <h3>SMA Swasta Kartika</h3>
+                        <h4>Jurusan IPS</h4>
+                        <p>Lulus dengan nilai unggul.</p>
+                    </div>
+                </div>
             </div>
-            <!-- Tombol Print (Opsional) -->
-            <button onclick="window.print()" style="padding: 5px 15px; cursor: pointer;">Print PDF</button>
         </div>
+    </section>
 
-        <div class="section-title">Tentang Saya</div>
-        <p>Saya adalah seorang profesional yang berdedikasi dengan pengalaman lebih dari 3 tahun di bidang teknologi. Saya memiliki passion yang kuat dalam menciptakan solusi digital yang efisien dan ramah pengguna. Saya selalu antusias mempelajari hal baru dan bekerja dalam tim.</p>
-
-        <div class="section-title">Pengalaman Kerja</div>
-        
-        <div class="job-item">
-            <div class="job-title">Senior Staff - PT Teknologi Maju</div>
-            <div class="company">2021 - Sekarang</div>
-            <p>Bertanggung jawab atas pengembangan produk utama, memimpin tim kecil, dan memastikan kualitas output sesuai standar perusahaan.</p>
-        </div>
-
-        <div class="job-item">
-            <div class="job-title">Junior Staff - PT Kreatif Digital</div>
-            <div class="company">2019 - 2021</div>
-            <p>Membantu dalam perancangan antarmuka pengguna, melakukan riset pasar, dan berkolaborasi dengan tim marketing.</p>
-        </div>
-
-        <div class="section-title">Pendidikan</div>
-        
-        <div class="edu-item">
-            <div class="job-title">Program Studi Ilmu Komputer</div>
-            <div class="company">Universitas Halu Oleo</div>
-            <p>Semester 4</p>
-        </div>
-
-        <div class="section-title">Keahlian</div>
-        <div class="skills-grid">
-            <span class="skill-tag">HTML & CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Project Management</span>
-            <span class="skill-tag">Public Speaking</span>
-            <span class="skill-tag">Adobe Photoshop</span>
-            <span class="skill-tag">Microsoft Office</span>
-        </div>
-
-    </div>
-
-    <!-- JAVASCRIPT UNTUK INTERAKSI -->
-    <script>
-        function showCV() {
-            const cvContent = document.getElementById('cv-content');
-            const heroSection = document.getElementById('home');
+    <!-- 4. PROJECT SECTION (FOKUS MAKANAN - TANPA FOTO) -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projek Utama</h2>
             
-            // 1. Tampilkan konten CV
-            cvContent.style.display = 'block';
-            
-            // 2. Beri sedikit jeda agar transisi CSS berjalan (fade in)
-            setTimeout(() => {
-                cvContent.style.opacity = '1';
-            }, 100);
+            <!-- Project Card Tanpa Gambar -->
+            <div class="main-project-card">
+                <div class="project-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="project-details">
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Marketing</span>
+                    </div>
+                    <h3>Website Sistem Informasi Resep Makanan</h3>
+                    <p>
+                        Website ini adalah sistem informasi resep makanan yang menyajikan berbagai 
+                        menu lengkap dengan detail bahan dan langkah pembuatan. Dilengkapi fitur kategori 
+                        dan pencarian untuk mempermudah navigasi, serta didesain secara responsif dengan tampilan clean 
+                        dan profesional.
+                    </p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Desain Responsif </li>
+                        <li><i class="fas fa-check"></i> Galeri Menu dengan Layout Grid</li>
+                        
+                        <li><i class="fas fa-check"></i> Animasi Scroll Halus</li>
+                    </ul>
+                    
+                </div>
+            </div>
 
-            // 3. Scroll halus ke bagian CV
-            cvContent.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
+        </div>
+    </section>
 
-            // 4. Opsional: Sembunyikan tombol di Hero agar tidak mengganggu saat scroll
-            // (Atau biarkan saja agar user bisa klik lagi jika mau reset)
-        }
-    </script>
+    <!-- 5. FOOTER -->
+    <footer>
+        <p>Terima kasih telah berkunjung.</p>
+        <p>&copy; 2024 [Nama Anda]. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
